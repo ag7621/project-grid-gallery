@@ -116,18 +116,56 @@ body {
     height: 24px;
 }
 
-.navbar .hamburger {
-    display: none;
-    height: 50px;
-    width: 50px;
-}
-
 .navbar .bar {
     background-color: black;
     border-radius: 10px;
     height: 4px;
     width: 36px;
     margin: 3px;
+}
+
+.navbar .hamburger {
+    display: none;
+    height: 50px;
+    width: 50px;
+}
+
+.navbar .hamburger:hover {
+    cursor: pointer;
+}
+
+.mobileNav {
+    position: fixed;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: -160px;
+    width: 80px;
+    height: 100vh;
+    padding: 1rem;
+    z-index: 2;
+    transition: transform 0.5s;
+}
+
+.mobileNav img {
+    width: 1.5rem;
+}
+
+.openDrawer {
+    transform: translateX(-160px);
+}
+
+.mobileNav a {
+    text-decoration: none;
+    color: black;
+    margin: 1rem 0;
+}
+
+.mobileNav a:hover {
+    text-decoration: underline;
 }
 
 .project-grid {
@@ -246,7 +284,7 @@ body {
         top: 0;
         left: 0;
         padding: 1rem;
-        z-index: 2;
+        z-index: 3;
     }
 
     .navbar .right {
@@ -276,6 +314,18 @@ body {
 
     .project .overlay {
         font-size: var(--fs-500);
+    }
+
+    .animateBar1 {
+        animation: flipBar1 1s forwards;
+    }
+
+    .animateBar2 {
+        animation: fadeBar2 1s forwards;
+    }
+
+    .animateBar3 {
+        animation: flipBar3 1s forwards;
     }
 
     @keyframes flipBar1 {
